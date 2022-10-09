@@ -39,7 +39,9 @@ body {
 .flex {
     display: flex;
 }
-
+textarea  {
+    resize: none;
+}
 
 /* special main setting */
 /* прибрати крапки з li та відступи ul */
@@ -287,10 +289,44 @@ header .link {
     transform: translate(-50%, -50%);
 
     width: 528px;
-    height: 521px;
+    min-height: 521px;
     background-color: var(--main-wight-color);
-    box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
 
+}
+.form {
+    padding: 40px;
+}
+.form-element {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.form-element input, .form-element textarea {
+    padding: 12px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+border-radius: 4px;
+}
+.form-element label {
+    margin-bottom: 4px;
+    display: block;
+    
+    color: 
+    rgba(117, 117, 117, 1);
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.2;
+    letter-spacing: 0.01em;
+}
+.form-title {
+    display: block;
+    margin-bottom: 12px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.2;
 }
 .close-button {
     position: absolute;
@@ -302,7 +338,9 @@ header .link {
     border-radius: 50%;
     cursor: pointer;
     background-color: #fff;
-    
+}
+.close-button:hover, .close-button:focus {
+    fill: var(--accent-color);
 }
 
 /* preference */
@@ -556,7 +594,7 @@ address .link {
     color: var(--spec-link-color);
     transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
 }
-strong {
+.soc-network-title {
     text-transform: uppercase;
 }
 .soc-network {
@@ -728,3 +766,13 @@ strong {
 } */
 
 
+/* 
+-модалка
+1. ховер на закриття
+2 назва блоку
+3 перед текттом іконка (біфор)
+4. в коментах підказка
+
+5 при ховері іконка синя
+6 
+ */
