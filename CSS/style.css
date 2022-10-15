@@ -310,7 +310,7 @@ header .link {
     border: 1px solid rgba(33, 33, 33, 0.2);
 border-radius: 4px;
 }
-.form-element label {
+.form-element label::not(:last-child) {
     margin-bottom: 4px;
     display: block;
     
