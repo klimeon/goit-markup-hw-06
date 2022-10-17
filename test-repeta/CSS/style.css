@@ -298,21 +298,27 @@ header .link {
 .form {
     padding: 40px;
 }
-.form-label {
+.form-element {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: left;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 28px;
 }
-.form-element input, .form-element textarea {
+.form-input, .form-element textarea {
+    display: inline-block;
+    position: relative;
     padding: 12px;
+    padding-left: 42px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
-.form-element label::not(:last-child) {
-    margin-bottom: 4px;
-    display: block;
+.form-element textarea {
+    padding-left: 12px;
+}
+
+.form-label {
     
     color: 
     rgba(117, 117, 117, 1);
@@ -321,9 +327,34 @@ header .link {
     line-height: 1.2;
     letter-spacing: 0.01em;
 }
+.form-label:not(:last-child) {
+    position: absolute;
+    top: 50%;
+    left: 0px;
+    transform: translatey(-50%) translateX(42px);
+    transition: transform 250ms var(--animation-funktion);
+}
+.form-label:last-child {
+    position: absolute;
+    top: 15px;
+    left: 0px;
+    transform: translatey(0%) translateX(12px);
+    transition: transform 250ms var(--animation-funktion);
+}
+.form-element textarea {
+    
+}
+.form-icon {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    display: inline-block;
+}
+
 .form-title {
     display: block;
-    margin-bottom: 12px;
+    margin-bottom: 30px;
     font-weight: 700;
     font-size: 20px;
     line-height: 1.2;
@@ -347,20 +378,17 @@ header .link {
     border-radius: 4px;
     fill: var(--accent-color);
 }
-.form-input {
-    position: relative;
-}
-.form-icon {
-    position: absolute;
-    top: 50%;
-    left: 12px;
-    transform: translateY(-50%);
-    
-}
 
-.form-input::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-}
+
+
+.form-input:focus ~ .form-label, .form-input:not(:placeholder-shown) + .form-label {
+    color: red;
+
+    transform: translatey(-37px) translateX(0px);
+
+} 
+
+
 
 
 /* preference */

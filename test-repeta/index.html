@@ -60,45 +60,38 @@
                         <form class="form js-speaker-form" action="">
                             <div class="form-box">
                                 <strong class="form-title">Залиште свої дані, ми вам передзвонимо</strong>
-                                <!-- <div class="form-element">
-                                    <label class="form-label" for="user-name">Ім'я
-                                        <input class="form-input" type="text" name="user-name" id="user-name" autofocus />
-                                        <svg class="form-icon">
-                                            <use class="svg" href="/images/icons.svg#person" height="18px" width="18px"></use>
-                                        </svg>
-                                    </label>
-                                    
+                                <div class="form-element">                                   
+                                    <input class="form-input" type="text" name="user-name" id="user-name" autofocus placeholder=" "/>       
+                                    <label class="form-label" for="user-name">Ім'я</label>                                 
+                                    <svg class="form-icon" height="18px" width="18px">
+                                        <use class="svg" href="/images/icons.svg#person" ></use>
+                                    </svg>                                
                                 </div>
                                 <div class="form-element">
-                                    <label class="form-label" for="tel">Телефон
-                                        <input class="form-input" type="tel" name="tel" id="tel" />
-                                        <svg class="form-icon">
-                                            <use class="svg" href="/images/icons.svg#phone" height="18px" width="18px"></use>
-                                        </svg>
-                                    </label>
                                     
-                                </div> -->
-                                <div class="form-element">
-                                    <label class="form-label" for="mail">Пошта
-                                        <input class="form-input" type="email" name="mail" id="mail" />
-                                        <div>
-                                            <svg class="form-icon">
-                                                <use class="svg" href="/images/icons.svg#email" height="18px" width="18px"></use>
-                                            </svg>
-                                        </div>
-                                        
-                                        
-                                    </label>
-                                    
+                                    <input class="form-input" type="tel" name="tel" id="tel" placeholder=" "/>
+                                    <label class="form-label" for="tel">Телефон</label>
+                                    <svg class="form-icon" height="18px" width="18px">
+                                        <use class="svg" href="/images/icons.svg#phone" ></use>
+                                    </svg>
                                 </div>
+                                <div class="form-element">                              
+                                    <input class="form-input" type="email" name="mail" id="mail" placeholder=" "/>
+                                    <label class="form-label" for="mail">Пошта</label>
+                                    <svg class="form-icon"height="18px" width="18px">
+                                        <use class="svg" href="/images/icons.svg#email" ></use>
+                                    </svg>                              
+                                </div>
+                                <!--  -->
                                 <div class="form-element">
+                                    <textarea class="form-input" name="coment" id="coment" cols="30" rows="10" placeholder=" " data-placeholder="Введіть текст"></textarea>
                                     <label class="form-label" for="coment">Коментар</label>
-                                    <textarea class="form-input" name="coment" id="coment" cols="30" rows="10" placeholder="Введіть текст"></textarea>
                                 </div>
+                                <!--  -->
                                 <div class="form-element">
                                     <div class="form-checkbox">
-                                        <input type="checkbox" name="policy" id="policy" />
-                                        <label class="form-label" for="policy">Погоджуюся з розсилкою та приймаю 
+                                        <input class="checkbox-input" type="checkbox" name="policy" id="policy" />
+                                        <label class="checkbox-label" for="policy">Погоджуюся з розсилкою та приймаю 
                                             <a href="">Умови договору</a>
                                         </label>
                                     </div> 
@@ -469,6 +462,11 @@
     </footer>
     <script src="./js/modal.js"></script>
     <script src="js-speaker-form.js"></script>
+    <script>
+        document .querySelector(' .for-input') .addEventListener('focusin', e => {
+            e .currentTarget .placeholder = e .currentTarget .dataset .placeholder;
+        })
+    </script>
 </body>
 </html>
 
