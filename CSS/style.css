@@ -295,22 +295,31 @@ header .link {
     border-radius: 4px;
 
 }
-.form {
+.form-box {
+    display: block;
     padding: 40px;
 }
+
 .form-label {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: left;
     text-align: left;
     margin-bottom: 10px;
 }
-.form-element input, .form-element textarea {
+.form-input {
     padding: 12px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
 }
-.form-element label::not(:last-child) {
+.form-input:not(:last-child) {
+    padding-left: 42px;
+}
+.name {
+    margin-bottom: 4px;
+}
+.form-label label::not(:last-child) {
     margin-bottom: 4px;
     display: block;
     
@@ -345,21 +354,24 @@ header .link {
 .form-input:hover, .form-input:focus {
     border: 1px solid var(--accent-color);
     border-radius: 4px;
-    fill: var(--accent-color);
+    outline: var(--accent-color);
 }
-.form-input {
+/* .form-input {
     position: relative;
-}
+} */
 .form-icon {
     position: absolute;
     top: 50%;
     left: 12px;
-    transform: translateY(-50%);
+    /* transform: translatex(-50%); */
     
 }
 
 .form-input::placeholder {
     color: rgba(117, 117, 117, 0.5);
+}
+.form-label:focus-within .form-icon {
+    fill: var(--accent-color);
 }
 
 

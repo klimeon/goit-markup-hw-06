@@ -376,6 +376,9 @@ header .link {
 .form-input:hover, .form-input:focus {
     border: 1px solid var(--accent-color);
     border-radius: 4px;
+    
+}
+.form-element:focus-within .form-icon {
     fill: var(--accent-color);
 }
 
