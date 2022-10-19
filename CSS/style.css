@@ -337,6 +337,11 @@ header .link {
     font-size: 20px;
     line-height: 1.2;
 }
+.checkbox-label {
+    display: block;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
 .close-button {
     position: absolute;
     right: 8px;
@@ -629,7 +634,7 @@ address .link {
 .soc-network-title {
     text-transform: uppercase;
 }
-.soc-network {
+.soc-network, .mailing-title {
     color: var(--main-wight-color);
     /* display: flex; */
     width: 206px;
@@ -659,6 +664,14 @@ address .link {
     width: 44px;
     height: 44px;
     transition: background-color 250ms var(--animation-funktion), fill 250ms var(--animation-funktion), color 250ms var(--animation-funktion);
+}
+.mailing {
+    display: flex;
+    flex-direction: column;
+    justify-content: left;
+}
+.mailing-input {
+    display: inline-block;
 }
 .soc-network-link:hover, .soc-network-link:focus {
     fill: var(--main-wight-color);
