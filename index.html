@@ -86,8 +86,13 @@
                                     <textarea class="form-input" name="coment" rows="8" cols="55" placeholder="Введіть текст"></textarea>
                                 </label>                                                               
                                 <label class="checkbox-label" for="policy">
-                                    <input type="checkbox" name="policy" id="policy" />
-                                    <span>Погоджуюся з розсилкою та приймаю<a href="">Умови договору</a></span>                                    
+                                    <input class="checkbox" type="checkbox" name="policy" id="policy" />
+                                    <span class="checkbox-icons">
+                                        <svg class="checkbox-icon" >
+                                            <use class="svg" href="/images/icons.svg#check" height="16px" width="15px" ></use>
+                                        </svg>
+                                    </span>
+                                    <span>Погоджуюся з розсилкою та приймаю <a href="">Умови договору</a></span>                                    
                                 </label>                                                   
                                 <button class="button sec" type="submit">Відправити</button>
                             </div>                           
@@ -455,7 +460,7 @@
                 <strong class="mailing-title">Підпишітся на розсилку</strong>
                 <label class="mailing-label">
                     <input class="mailing-input" type="email" name="mail" placeholder="E-mail">
-                    <button>Підписатися
+                    <button class="mailing-button"> Підписатися
                         <svg class="mailing-icon" width="24px" height="24px">
                             <use class="svg" href="/images/icons.svg#send" ></use>
                         </svg>

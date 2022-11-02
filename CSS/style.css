@@ -338,9 +338,38 @@ header .link {
     line-height: 1.2;
 }
 .checkbox-label {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 30px;
     margin-top: 20px;
+}
+.checkbox {
+    appearance: none;
+    position: absolute;
+}
+.checkbox-icons {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin-right: 8.38px;
+    width: 15px;
+    height: 16px;
+    border: 2px solid #000000;
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border-radius: 4px;
+    fill: #fff;
+    
+}
+.checkbox-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.checkbox:checked + .checkbox-icons {
+    background-color: var(--accent-color);
+    background-origin: border-box;
+    border: none;
 }
 .close-button {
     position: absolute;
@@ -634,7 +663,8 @@ address .link {
 .soc-network-title {
     text-transform: uppercase;
 }
-.soc-network, .mailing-title {
+.soc-network {
+    text-transform: uppercase;
     color: var(--main-wight-color);
     /* display: flex; */
     width: 206px;
@@ -668,11 +698,54 @@ address .link {
 .mailing {
     display: flex;
     flex-direction: column;
-    justify-content: left;
+    padding-left: 69px;
+
+}
+.mailing-label {
+    display: flex;
+    text-align: center;
+    margin-top: 20px;
+    
 }
 .mailing-input {
-    display: inline-block;
+    margin-right: 12px;
+    min-width: 357px;
+    padding: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+    /* background-color: rgba(0, 0, 0, 0.15); */
+    background-color: #2F303A;
+    color: #fff;
 }
+.mailing-button {
+    /* display: flex;
+    text-align: center; */
+    min-width: 200px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.88;
+    border-style: none;
+    border-radius: 4px;
+    background-color: var(--accent-color);
+    color: var(--main-wight-color);
+}
+.mailing-icon {
+    display: inline-block;
+    text-align: center;
+    fill: #fff;
+}
+.mailing-title {
+    text-transform: uppercase;
+    color: var(--main-wight-color);
+    /* display: flex; */
+    
+    /* margin-left: 69px; */
+}
+/* .mailing-input {
+    display: inline-block;
+} */
 .soc-network-link:hover, .soc-network-link:focus {
     fill: var(--main-wight-color);
     background-color: var(--accent-color);
