@@ -701,6 +701,9 @@ address .link {
     padding-left: 69px;
 
 }
+.mailing-box {
+    display: flex;
+}
 .mailing-label {
     display: flex;
     text-align: center;
@@ -726,6 +729,7 @@ address .link {
     align-items: center;
     justify-content: space-evenly;
     min-width: 200px;
+    margin-top: 20px;
     background-color: var(--accent-color);
     color: var(--main-wight-color);
     border-radius: 4px;
