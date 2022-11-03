@@ -719,8 +719,9 @@ address .link {
     color: #fff;
 }
 .mailing-button {
-    /* display: flex;
-    text-align: center; */
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
     min-width: 200px;
     text-decoration: none;
     font-weight: 700;
@@ -732,8 +733,8 @@ address .link {
     color: var(--main-wight-color);
 }
 .mailing-icon {
-    display: inline-block;
-    text-align: center;
+
+    
     fill: #fff;
 }
 .mailing-title {
