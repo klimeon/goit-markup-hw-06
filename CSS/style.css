@@ -372,6 +372,9 @@ header .link {
     border: none;
 }
 .close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     right: 8px;
     top: 8px;
